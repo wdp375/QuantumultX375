@@ -69,7 +69,6 @@ function getCookie(){
         $notify("yxsk", "get cookie success", cookie_str])
         sign(cookie_str)
 
-        $done();
     }, reason => {
         console.log(reason.error);
         $done();
