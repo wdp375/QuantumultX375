@@ -66,7 +66,7 @@ function getCookie(){
         // Set-Cookie: PHPSESSID=3942890d626297dcf4f2b1aad4f57dc8; path=/; domain=.work.faquanbao.cn; HttpOnly
         // Cookie: PHPSESSID=3942890d626297dcf4f2b1aad4f57dc8
         cookie_str='PHPSESSID='+result['PHPSESSID']
-        $notify("yxsk", "get cookie success", cookie_str])
+        $notify("yxsk", "get cookie success", "$cookie_str")
         sign(cookie_str)
 
     }, reason => {
