@@ -1,9 +1,9 @@
-const $ = new Env('yxsk')
+// const $ = new Env('yxsk')
 
-const cookieKey = 'fzcs_wx_yxsk_cookie'
-const tokenKey = 'fzcs_wx_yxsk_cookie'
-const cookieVal = $.getdata(cookieKey)
-const tokenVal = $.getdata(tokenKey)
+// const cookieKey = 'fzcs_wx_yxsk_cookie'
+// const tokenKey = 'fzcs_wx_yxsk_cookie'
+// const cookieVal = $.getdata(cookieKey)
+// const tokenVal = $.getdata(tokenKey)
 
 // sign()
 getCookie()
