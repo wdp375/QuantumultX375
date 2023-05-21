@@ -4,9 +4,7 @@ getCookie()
 
 function sign(tokenVal) {
     console.log('start sign funcation !!!!');
-    let url = {
-      url: `http://61694f02ba69d851707731gdjwqmad.work.faquanbao.cn/index.php/wap/clockin/sign/corpid/ww05254b704b73e671/id/L067QVJMbw5ChNOXXzuQyVUo4w.html`,
-    }
+    const url = `http://61694f02ba69d851707731gdjwqmad.work.faquanbao.cn/index.php/wap/clockin/sign/corpid/ww05254b704b73e671/id/L067QVJMbw5ChNOXXzuQyVUo4w.html`;
     const method = `POST`;
     const headers = {
     'X-Requested-With' : `XMLHttpRequest`,
@@ -20,7 +18,7 @@ function sign(tokenVal) {
     'Accept' : `*/*`
     };
     const body = `submit=submit`;
-    url.headers = headers 
+
     const myRequest = {
         url: url,
         method: method,
@@ -59,13 +57,10 @@ function getCookie(){
 
     $task.fetch(myRequest).then(response => {
         console.log(response.statusCode + "\n\n" + response.headers['Set-Cookie']);
-        yxsk_cookie= response.headers['Set-Cookie']
+        yxsk_cookie = response.headers['Set-Cookie']
         console.log('Set-Cookie:'+yxsk_cookie);
-        const result = JSON.parse(yxsk_cookie)
-        console.log("tookie:"+result['PHPSESSID']);
-        // Set-Cookie: PHPSESSID=3942890d626297dcf4f2b1aad4f57dc8; path=/; domain=.work.faquanbao.cn; HttpOnly
-        // Cookie: PHPSESSID=3942890d626297dcf4f2b1aad4f57dc8
-        cookie_str='PHPSESSID='+result['PHPSESSID']
+        cookie_str = yxsk_cookie.split(';')[0]
+        console.log('cookie_str:'+cookie_str);
         $notify("yxsk", "get cookie success", "$cookie_str")
         sign(cookie_str)
 
