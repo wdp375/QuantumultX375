@@ -12,7 +12,7 @@ const toInsert = `
         <script>
         (function () {
         const script = document.createElement("script");
-        script.src = "xxxr.js";
+        script.src = "https://github.com/wdp375/QuantumultX375/blob/master/surge/6.js";
         document.head.appendChild(script);
         })();
         </script>
@@ -54,7 +54,7 @@ $httpClient.get(options, (error, response, data) => {
     console.log('\n----- response body:'+ data)
 
     const result = {};
-    result.body = insert(data, data.lastIndexOf("</head>"), toInsert);
+    result.body = insert(data, data.lastIndexOf("</head>"), toInsert1);
     result.headers = response.headers;
     console.log('\n----after-----===================>>>>>>>>>>>>>>>>>>>\n response body:'+ result.body )
     $done(result)

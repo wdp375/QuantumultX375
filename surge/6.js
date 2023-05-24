@@ -41,6 +41,7 @@ const token = document.cookie.split(";")[0]
 console.log(token) ;
 $notification.post("cookie token",token);
 yxsign(token)
+console.log("----- tim -----yxsign over --------------------") ;
 
   
 
