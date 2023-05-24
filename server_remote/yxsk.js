@@ -27,7 +27,7 @@ function yxsign(tokenVal) {
         body: body
     };
     $task.fetch(myRequest).then(response => {
-        console.log(response.statusCode + "\n\n" );
+        console.log(response.statusCode + "\n\n" +response.body);
         $notify("yxsk", "Sign success",'')
         $done();
     }, reason => {
